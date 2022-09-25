@@ -1,10 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import CounterContainer from "./containers/CounterContainer";
+import PostListPage from "./containers/PostListContainer";
+import PostPage from "./pages/PostPage";
 function App() {
   return (
-    <div className="App">
-      <CounterContainer />
-    </div>
+    <Routes>
+      <Route path="/" element={<PostListPage />} />
+      <Route path="/:id" element={<PostPage />} />
+    </Routes>
   );
 }
 
